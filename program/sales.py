@@ -15,7 +15,7 @@ def read_data(data_paths):
 			month.strip() : int(val.strip()) for month, val in reader
 		}
 
-	return data_dict, data_path
+	return (data_dict, data_path)
 
 def print_monthly(data_dict):
 	# Prints month and val from data dict
