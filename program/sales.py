@@ -9,7 +9,7 @@ def read_data(data_paths):
 
 	# Opens csv and reads data to dict via dict comprehension
 	data_dict = {}
-	with open(data_path) as cf:
+	with open(data_path, newline='\n') as cf:
 		reader = csv.reader(cf)
 		data_dict = {
 			month.strip() : int(val.strip()) for month, val in reader
