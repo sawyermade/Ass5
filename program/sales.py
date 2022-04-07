@@ -75,7 +75,7 @@ def main():
 	cont_flag = True
 	while cont_flag:
 		# Gets user command
-		cmd = input('Command: ').strip()
+		cmd = input('Command: ').strip().lower()
 
 		# Prints monthly
 		if cmd == 'monthly':
