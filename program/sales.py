@@ -12,7 +12,7 @@ def read_data(data_paths):
 	with open(data_path, newline='\n') as cf:
 		reader = csv.reader(cf)
 		data_dict = {
-			month.strip() : int(val.strip()) for month, val in reader
+			month.strip().lower().title() : int(val.strip()) for month, val in reader
 		}
 
 	return (data_dict, data_path)
