@@ -54,8 +54,7 @@ def save_data(data_dict, data_path):
 	# Saves updated data dict to csv file we opened
 	with open(data_path, 'w') as cf:
 		writer = csv.writer(cf)
-		for item in data_dict.items():
-			writer.writerows([item])
+		writer.writerows(list(data_dict.items()))
 
 def main():
 	# CSV data path, works both in and just outside program directory.
