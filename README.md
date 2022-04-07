@@ -8,6 +8,8 @@ cd Ass5
 ```
 
 ## Run:
+May have to use python instead of python3 if on Windows
+
 ```
 python3 program/sales.py
 ```
