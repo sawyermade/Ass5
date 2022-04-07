@@ -57,7 +57,7 @@ def save_data(data_dict, data_path):
 		writer.writerows(list(data_dict.items()))
 
 def main():
-	# CSV data path, works both within and just outside program directory.
+	# CSV possible data paths, works both within and just outside program directory.
 	data_paths = ['../data/monthly_sales.csv', 'data/monthly_sales.csv']
 
 	# Read data from csv
