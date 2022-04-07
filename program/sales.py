@@ -1,8 +1,7 @@
 import os, csv
 
 def read_data(data_paths):
-	# Gets correct data path, platform independent
-	data_paths = [path.replace('/', os.sep) for path in data_paths]
+	# Gets correct data path, should work on windows too
 	for path in data_paths:
 		if os.path.exists(path):
 			data_path = path
