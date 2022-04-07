@@ -1,12 +1,12 @@
 import os, csv
 
-def read_data(data_path):
+def read_data(data_paths):
 	# Gets correct data path, platform independent
-	data_path = [path.replace('/', os.sep) for path in data_path]
-	if os.path.exists(data_path[0]):
-		data_path = data_path[0]
+	data_paths = [path.replace('/', os.sep) for path in data_paths]
+	if os.path.exists(data_paths[0]):
+		data_path = data_paths[0]
 	else:
-		data_path = data_path[1]
+		data_path = data_paths[1]
 
 	# Opens csv and reads data to dict via dict comprehension
 	data_dict = {}
@@ -58,10 +58,10 @@ def save_data(data_dict, data_path):
 
 def main():
 	# CSV data path, works both in and just outside program directory.
-	data_path = ['../data/monthly_sales.csv', 'data/monthly_sales.csv']
+	data_paths = ['../data/monthly_sales.csv', 'data/monthly_sales.csv']
 
 	# Read data from csv
-	data_dict, data_path = read_data(data_path)
+	data_dict, data_path = read_data(data_paths)
 	
 	# Print program title and commands
 	print('Monthly Sales program\n')
