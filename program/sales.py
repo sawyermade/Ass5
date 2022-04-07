@@ -32,12 +32,11 @@ def print_yearly(data_dict):
 	print(f'Monthly average:  {avg}\n')
 
 def edit_data(data_dict, data_path):
-	# Get valid months and user month
-	month_list = list(data_dict.keys())
+	# Get month from user
 	month = input('Three-letter Month: ').strip().title()
 	
 	# If month is valid, else error
-	if month in month_list:
+	if month in data_dict:
 		# Gets new val from user and saves to dict
 		val = int(input('Sales Amount: ').strip())
 		data_dict[month] = val
