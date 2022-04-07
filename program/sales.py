@@ -3,10 +3,9 @@ import os, csv
 def read_data(data_paths):
 	# Gets correct data path, platform independent
 	data_paths = [path.replace('/', os.sep) for path in data_paths]
-	if os.path.exists(data_paths[0]):
-		data_path = data_paths[0]
-	else:
-		data_path = data_paths[1]
+	for path in data_paths:
+		if os.path.exists(path):
+			data_path = path
 
 	# Opens csv and reads data to dict via dict comprehension
 	data_dict = {}
