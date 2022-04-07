@@ -33,7 +33,7 @@ def print_yearly(data_dict):
 
 def edit_data(data_dict, data_path):
 	# Get month from user
-	month = input('Three-letter Month: ').strip().title()
+	month = input('Three-letter Month: ').strip().lower().title()
 	
 	# If month is valid, else error
 	if month in data_dict:
