@@ -1,6 +1,6 @@
 import os, csv
 
-def get_data(data_path):
+def read_data(data_path):
 	# Gets correct data path, platform independent
 	data_path = [path.replace('/', os.sep) for path in data_path]
 	if os.path.exists(data_path[0]):
@@ -61,7 +61,7 @@ def main():
 	data_path = ['../data/monthly_sales.csv', 'data/monthly_sales.csv']
 
 	# Read data from csv
-	data_dict, data_path = get_data(data_path)
+	data_dict, data_path = read_data(data_path)
 	
 	# Print program title and commands
 	print('Monthly Sales program\n')
