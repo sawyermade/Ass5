@@ -80,7 +80,7 @@ def main():
 		if cmd == 'monthly':
 			print_monthly(data_dict)
 
-		# Prints yearly
+		# Prints yearly and average
 		elif cmd == 'yearly':
 			print_yearly(data_dict)
 
